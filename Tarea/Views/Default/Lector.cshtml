@@ -1,0 +1,23 @@
+﻿<div class="jumbotron bg-dark text-center text-white">
+
+    <h2>Lector</h2>
+</div>
+
+@if (IsPost)
+{
+    string data = Request["uploadedfile"];
+    <p>@data</p>
+}
+
+<div class=" row justify-content-center">
+
+    <div class="form-group">
+
+
+        <form enctype="multipart/form-data" class="form-control" method="POST">
+            <input name="uploadedfile"  class="form-control-file" type="file" />
+            <input type="submit" class="btn btn-dark" value="Subir archivo" />
+        </form>
+    </div>
+
+</div>
